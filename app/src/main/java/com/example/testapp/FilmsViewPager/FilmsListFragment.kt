@@ -31,7 +31,6 @@ class FilmsListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_films_list, container, false)
     }
@@ -61,31 +60,7 @@ class FilmsListFragment : Fragment() {
 
                 }
 
-
             })
-
-
-
-        /*val service = Service.buildService(ApiInterface::class.java)
-        val call  = service.getData()
-
-        call.enqueue(object : Callback<MutableList<Result>>{
-            override fun onResponse(call: Call<MutableList<Result>>, response: Response<MutableList<Result>>) {
-                if(response.isSuccessful){
-                    //Log.e("success", response.body().toString())
-                    recyclerView.apply {
-                        layoutManager = LinearLayoutManager(context)
-                        adapter = MyAdapter(response.body()!!)
-                    }
-                }
-            }
-
-            override fun onFailure(call: Call<MutableList<Result>>, t: Throwable) {
-                TODO("Not yet implemented")
-            }
-
-        })*/
-
 
     }
 

@@ -9,10 +9,8 @@ data class Entity(
     @PrimaryKey(autoGenerate = true)
     var userId: Int = 0,
 
-    //@ColumnInfo(name = "email")
     var email:String,
 
-    //@ColumnInfo(name = "password")
     var password:String,
 
     var isLogged:Boolean

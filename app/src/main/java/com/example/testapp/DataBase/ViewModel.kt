@@ -10,8 +10,6 @@ import kotlinx.coroutines.launch
 class ViewModel(application: Application):AndroidViewModel(application) {
 
     private val readAllData: LiveData<List<Entity>>
-    //private val aa = MutableLiveData<Boolean>()
-    //private val result = MutableLiveData<Boolean>()
     private val repository:Repository
 
     init {
@@ -41,13 +39,9 @@ class ViewModel(application: Application):AndroidViewModel(application) {
         return result1
     }
 
-
-
     fun checkIsValidAccount(username: String, password: String):LiveData<Boolean>{
-        //var a = false
         val result = MutableLiveData<Boolean>()
         viewModelScope.launch(Dispatchers.IO){
-            //repository.count(user.email,user.password)
             val a = repository.isValidAccount(username,password)
             result.postValue(a)
         }
@@ -66,10 +60,6 @@ class ViewModel(application: Application):AndroidViewModel(application) {
             repository.updateAll(isLogged)
         }
     }
-    /*fun checkIsValidAccount(username: String, password: String){
-        viewModelScope.launch(Dispatchers.IO){
-            result.value = repository.isValidAccount(username,password)
-        }
-    }*/
+
 
 }

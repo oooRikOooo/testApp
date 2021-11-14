@@ -55,7 +55,6 @@ class FilmsDetailsFragment : Fragment() {
             textViewReleaseDataFilmDetails?.text = rDate
             textViewLanguageFilmDetails?.text = language
             textViewOverviewFilmDetails?.text = overview
-            //Toast.makeText(activity, "Oops sorry..!!${title}", Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(activity, "Oops sorry..!!${arguments.toString()}", Toast.LENGTH_SHORT).show();
         }

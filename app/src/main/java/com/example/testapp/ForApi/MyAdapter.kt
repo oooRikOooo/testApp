@@ -59,15 +59,12 @@ class MyAdapter(private val dataList:MutableList<Result>) : RecyclerView.Adapter
 
             val fragment = FilmsDetailsFragment()
             fragment.arguments = bundle
-            //Toast.makeText(context,bundle.getString("title"),Toast.LENGTH_SHORT).show()
-            //Navigation.createNavigateOnClickListener(R.id.action_mainFragment_to_filmsDetailsFragment).onClick(holder.itemView)
             val fragmentManager = (holder.itemView.context as FragmentActivity).supportFragmentManager
 
             fragmentManager.beginTransaction().replace(R.id.fragment,fragment).addToBackStack( "tag" ).commit()
 
 
         }
-        //return holder.bindView(dataList[position])
 
     }
 

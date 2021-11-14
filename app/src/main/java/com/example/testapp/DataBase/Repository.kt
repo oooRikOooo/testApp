@@ -38,7 +38,5 @@ class Repository(private val dao: DatabaseDao) {
         dao.updateAll(isLogged)
     }
 
-    /*suspend fun getUserName(userName: String): Entity?{
-        return dao.getUsername(userName)
-    }*/
+
 }

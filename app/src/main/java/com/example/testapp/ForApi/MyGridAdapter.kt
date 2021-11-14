@@ -33,8 +33,6 @@ class MyGridAdapter(private val dataList:MutableList<Result>) : RecyclerView.Ada
         Picasso.get().load("https://image.tmdb.org/t/p/w500${data.poster_path}").into(iV)
 
         holder.itemView.setOnClickListener{
-            //Toast.makeText(context,data.title, Toast.LENGTH_SHORT).show()
-            //Navigation.createNavigateOnClickListener(R.id.action_mainFragment_to_filmsDetailsFragment).onClick(holder.itemView)
             val bundle = Bundle()
             bundle.putString("iV", data.poster_path)
             bundle.putString("title", data.title)

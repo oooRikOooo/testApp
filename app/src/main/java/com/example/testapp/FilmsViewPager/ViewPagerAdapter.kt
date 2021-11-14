@@ -20,29 +20,4 @@ class ViewPagerAdapter(fm:Fragment):FragmentStateAdapter(fm) {
             } else -> FilmsListFragment()
         }
     }
-    /*override fun getCount(): Int = fragmentCount *//*{
-        return 2
-    }*//*
-
-    override fun getItem(position: Int): Fragment {
-        return when(position){
-            0 -> {
-                FilmsListFragment()
-            }
-            1-> {
-                FilmsTableFragment()
-            } else -> FilmsListFragment()
-        }
-    }
-
-    override fun getPageTitle(position: Int): CharSequence {
-        return fragmentTitleList[position]
-    *//*when (position) {
-            0 -> "Список"
-            1 -> "Таблиця"
-            else -> {
-                return "Список"
-            }
-        }*//*
-    }*/
 }

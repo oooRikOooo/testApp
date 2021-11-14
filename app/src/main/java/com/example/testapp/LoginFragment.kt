@@ -30,10 +30,6 @@ class LoginFragment : Fragment() {
     var navc: NavController? = null
     private lateinit var mUserViewModel: ViewModel
 
-
-
-
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -52,16 +48,12 @@ class LoginFragment : Fragment() {
         navc = Navigation.findNavController(view)
         buttonLogin.setOnClickListener {
             checkUserToLogin()
-            //navc?.navigate(R.id.action_loginFragment_to_mainFragment)
         }
         buttonRegister.setOnClickListener {
             navc?.navigate(R.id.action_loginFragment_to_registerFragment2)
         }
 
-
-
     }
-
 
     private fun checkUserToLogin(){
         val email = editTextTextEmailAddress.text.toString()
@@ -93,7 +85,6 @@ class LoginFragment : Fragment() {
                 Toast.makeText(requireContext(), "Successfully login", Toast.LENGTH_LONG).show()
                 navc?.navigate(R.id.action_loginFragment_to_mainFragment)
             } else {
-                //Log.d("Fail",a.toString() )
                 Toast.makeText(requireContext(),"Login failed", Toast.LENGTH_LONG).show()
             }
         })

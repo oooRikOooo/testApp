@@ -69,8 +69,7 @@ class MainFragment : Fragment(),NavigationView.OnNavigationItemSelectedListener 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        /*val fragmentAdapter = ViewPagerAdapter(supportFragmentManager, lifecycle)
-        viewPager.adapter =*/
+
 
         navc = Navigation.findNavController(view)
         val toggle = ActionBarDrawerToggle(activity,drawerLayout, toolbar,R.string.open,R.string.close)

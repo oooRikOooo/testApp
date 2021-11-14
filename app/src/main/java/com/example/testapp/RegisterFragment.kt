@@ -35,7 +35,7 @@ class RegisterFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_register, container, false)
 
         mUserViewModel = ViewModelProvider(this).get(ViewModel::class.java)
-        //navc = Navigation.findNavController(view)
+
 
 
 
